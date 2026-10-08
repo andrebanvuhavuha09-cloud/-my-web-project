@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+ 
+header {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+ 
+header h1 {
+    margin-bottom: 5px;
+}
+ 
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+ 
+.card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+}
+ 
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+ 
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+ 
+.courses label {
+    font-weight: normal;
+}
+ 
+.courses input {
+    width: auto;
+    margin-right: 8px;
+}
+ 
+button {
+    margin-top: 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+form button {
+    width: 100%;
+}
+ 
+.error {
+    display: block;
+    margin-top: 4px;
+}
+ 
+pre {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+ 
+.student-card {
+    border: 1px solid #ddd;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+ 
+@media (max-width: 600px) {
+ 
+    .container {
+        padding: 10px;
+    }
+ 
+    .card {
+        padding: 15px;
+    }
+ 
+    header h1 {
+        font-size: 24px;
+    }
+}

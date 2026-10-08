@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Registration</title>
+ 
+    <!-- index.html is inside html/, so go up one level to css/ -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+ 
+<body>
+ 
+<header>
+    <h1>Student Course Registration</h1>
+    <p>Week 9 - JSON Serialization and Deserialization</p>
+</header>
+ 
+<main class="container">
+ 
+    <section class="card">
+        <h2>1. Enter Student Details</h2>
+ 
+        <form id="studentForm">
+ 
+            <label for="studentID">Student ID</label>
+            <input type="text" id="studentID" placeholder="STU001" required>
+            <small id="studentIDError" class="error"></small>
+ 
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Mary Tari" required>
+            <small id="nameError" class="error"></small>
+ 
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="mary@example.com" required>
+            <small id="emailError" class="error"></small>
+ 
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="7712345" required>
+            <small id="phoneError" class="error"></small>
+ 
+            <label for="island">Island</label>
+            <input type="text" id="island" placeholder="Efate" required>
+ 
+            <label for="province">Province</label>
+            <select id="province" required>
+                <option value="">Select Province</option>
+                <option value="Torba">Torba</option>
+                <option value="Sanma">Sanma</option>
+                <option value="Penama">Penama</option>
+                <option value="Malampa">Malampa</option>
+                <option value="Shefa">Shefa</option>
+                <option value="Tafea">Tafea</option>
+            </select>
+ 
+            <label>Select Courses</label>
+ 
+            <div class="courses">
+                <label>
+                    <input type="checkbox" name="course" value="ITDI110">
+                    ITDI110 - Object-Oriented Programming
+                </label>
+ 
+                <label>
+                    <input type="checkbox" name="course" value="ITDI111">
+                    ITDI111 - Databases
+                </label>
+ 
+                <label>
+                    <input type="checkbox" name="course" value="ITDI112">
+                    ITDI112 - Web Development
+                </label>
+            </div>
+ 
+            <small id="courseError" class="error"></small>
+ 
+            <button type="submit">Register and Convert</button>
+        </form>
+ 
+        <p id="message"></p>
+    </section>
+ 
+    <section class="card">
+        <h2>2. Original Student Object</h2>
+        <p>This shows the data stored in the Student object before JSON.stringify().</p>
+        <pre id="objectOutput">No student object yet.</pre>
+    </section>
+ 
+    <section class="card">
+        <h2>3. After JSON.stringify()</h2>
+        <p>The JavaScript object has now been serialized into JSON text/string.</p>
+        <pre id="stringifyOutput">No JSON string yet.</pre>
+    </section>
+ 
+    <section class="card">
+        <h2>4. After JSON.parse()</h2>
+        <p>The JSON string has now been deserialized back into JavaScript data.</p>
+        <pre id="parseOutput">No parsed object yet.</pre>
+    </section>
+ 
+    <section class="card">
+        <h2>5. Registered Students</h2>
+ 
+        <div id="studentList">
+            <p>No students registered.</p>
+        </div>
+ 
+        <button id="downloadJSON" type="button">
+            Download students.json
+        </button>
+    </section>
+ 
+</main>
+ 
+<!-- Load JavaScript in MVC order: Model -> View -> Controller -->
+<script src="../js/model/Student.js"></script>
+<script src="../js/view/StudentView.js"></script>
+<script src="../js/controller/StudentController.js"></script>
+ 
+</body>
+</html>
